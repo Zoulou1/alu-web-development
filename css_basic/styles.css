@@ -1,1 +1,32 @@
-#
+/* Flexbox layout styles */
+
+/* Make <body> a flex container, align items in a column */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Make <main> a flex container, align <article> and <aside> in a row */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;  /* Allow main to grow/shrink to fill available space */
+}
+
+/* Allocate 2/3 of the space to <article> */
+article {
+    flex: 2;
+    overflow-y: auto;  /* Allow vertical scrolling in article */
+}
+
+/* Allocate 1/3 of the space to <aside> */
+aside {
+    flex: 1;
+    overflow-y: auto;  /* Allow vertical scrolling in aside */
+}
+
+/* Ensure <header> and <footer> take their natural height */
+header, footer {
+    flex-shrink: 0;  /* Prevent header and footer from shrinking */
+}
